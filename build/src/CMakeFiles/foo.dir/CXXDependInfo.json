@@ -1,0 +1,31 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/build/src",
+	"dir-cur-src" : "/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/src",
+	"dir-top-bld" : "/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/build",
+	"dir-top-src" : "/home/eugene/FILES/Projects/dev/Cpp/exemplar-project",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/src/lib_foo",
+		"/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/src/just_foo"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/build/src/CMakeFiles/foo.dir",
+	"sources" : 
+	{
+		"src/CMakeFiles/foo.dir/lib_foo/foo.cpp.o" : 
+		{
+			"language" : "CXX",
+			"source" : "/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/src/lib_foo/foo.cpp"
+		}
+	}
+}

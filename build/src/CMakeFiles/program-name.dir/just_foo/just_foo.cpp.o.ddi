@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "src/CMakeFiles/program-name.dir/just_foo/just_foo.cpp.o",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

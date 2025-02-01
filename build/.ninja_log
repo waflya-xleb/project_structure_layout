@@ -1,0 +1,20 @@
+# ninja log v6
+3	196	1738409962841633994	src/CMakeFiles/program-name.dir/just_foo/just_foo.cpp.o.ddi	83262b4e4b7a443d
+1	197	1738409962841633994	src/CMakeFiles/foo.dir/lib_foo/foo.cpp.o.ddi	c9ecd3dd66e7ab3
+2	204	1738409962841633994	src/CMakeFiles/program-name.dir/utils/utils.cpp.o.ddi	88e707ee5f1fd54c
+1	206	1738409962841633994	src/CMakeFiles/program-name.dir/main.cpp.o.ddi	fe4f27fe749c7abd
+197	208	1738409963044969613	src/CMakeFiles/foo.dir/CXX.dd	cf6caf6d173808c1
+197	208	1738409963044969613	/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/build/src/CMakeFiles/foo.dir/CXXModules.json	cf6caf6d173808c1
+197	208	1738409963044969613	src/CMakeFiles/foo.dir/lib_foo/foo.cpp.o.modmap	cf6caf6d173808c1
+206	217	1738409963054969725	src/CMakeFiles/program-name.dir/CXX.dd	57ec7f1f011f0724
+206	217	1738409963054969725	/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/build/src/CMakeFiles/program-name.dir/CXXModules.json	57ec7f1f011f0724
+206	217	1738409963054969725	src/CMakeFiles/program-name.dir/main.cpp.o.modmap	57ec7f1f011f0724
+206	217	1738409963054969725	src/CMakeFiles/program-name.dir/utils/utils.cpp.o.modmap	57ec7f1f011f0724
+206	217	1738409963054969725	src/CMakeFiles/program-name.dir/just_foo/just_foo.cpp.o.modmap	57ec7f1f011f0724
+218	2611	1738409963058303096	src/CMakeFiles/program-name.dir/just_foo/just_foo.cpp.o	66fc69015f984d71
+208	2722	1738409963048302984	src/CMakeFiles/foo.dir/lib_foo/foo.cpp.o	d8e965db0e762e3
+2723	2783	1738409965561664573	src/libfoo.a	ca45ee6aa750ed5c
+218	2866	1738409963058303096	src/CMakeFiles/program-name.dir/utils/utils.cpp.o	55b62c575bcdd1f8
+218	3471	1738409963058303096	src/CMakeFiles/program-name.dir/main.cpp.o	11a8d3014c135a01
+3471	3549	1738409966311673005	/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/bin/program-name-0.0.0.0	be71d696ed7bc0bc
+3549	3558	1738409966388340534	/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/bin/program-name	e1fe9beaa782bf9c

@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "src/CMakeFiles/foo.dir/lib_foo/foo.cpp.o",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

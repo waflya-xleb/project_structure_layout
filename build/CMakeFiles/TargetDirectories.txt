@@ -1,0 +1,6 @@
+/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/build/CMakeFiles/edit_cache.dir
+/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/build/CMakeFiles/rebuild_cache.dir
+/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/build/src/CMakeFiles/program-name.dir
+/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/build/src/CMakeFiles/foo.dir
+/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/build/src/CMakeFiles/edit_cache.dir
+/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/build/src/CMakeFiles/rebuild_cache.dir
