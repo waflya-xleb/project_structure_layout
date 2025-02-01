@@ -1,40 +1,29 @@
-bla-bla-bla
+text-text-text
 
-The Structure:
---Project-name v*.*.* \
-  |-bin\
-    |-out\
+Project tree:
+--Project-name v*.*.* /
+  |-bin/
       |-**
-  |-build\
+  |-build/
     |-**
-  |-cmake\
-    |-base-kit.cmake;
-    |-*.cmake
-  |-documentation\
-    |-Project_structure.txt;
-    |-rules.txt;
-    |-syntax_rules.txt;
+  |-documentation/
+    |-Project_structure.txt
+    |-syntax_rules.txt
     |-*.txt;
-  |-include\
-    |-include_system_libs.hpp;
-    |-*.hpp;
-  |-libs\
-    |-custom_lib\
+  |-libs/
+    |-dynamic/
+      |-*.dll/*.so
+    |-source_libs/
       |-**
-    |-dll\
-      |-*.dll;
-    |-lib\
-      |-*.lib;
-    |-non_compiled_lib\
-      |-**
-  |-src\
-    |-main.cpp;
-    |-CMakeLists.txt;
-    |-include\
-      |-# includes.hpp #;
-      |-*.hpp;
-    |-utils\
-      |-utils.cpp;
-      |-utils.hpp;
-  |-CMakeLists.txt;
+    |-static/
+      |-*.lib
+  |-src/
+    |-main.cpp
+    |-CMakeLists.txt
+    |-utils/
+      |-includes.hpp
+      |-utils.cpp
+      |-utils.hpp
+  |-base-kit.cmake
+  |-CMakeLists.txt
 
