@@ -2,10 +2,10 @@
 #ifndef _UTILS_HPP_
 #define _UTILS_HPP_
 
-#include "includes.hpp"
+#include "integrated_cxx_libs.hpp"
 
 namespace su {
-	void arg_foo( int argc, const char* argv[] );
+	void arg_function( int argc, const char* argv[] );
 
 	void custom_log_save( std::string& path, std::string& text, std::chrono::duration<float> program_time );
 

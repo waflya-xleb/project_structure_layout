@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _INCLUDE_SYSTEM_LIBS_HPP_
-#define _INCLUDE_SYSTEM_LIBS_HPP_
+#ifndef _INTEGRATED_CXX_LIBS_HPP_
+#define _INTEGRATED_CXX_LIBS_HPP_
 
 #include <iostream>
 #include <fstream>

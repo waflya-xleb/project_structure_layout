@@ -1,7 +1,7 @@
 src/CMakeFiles/program-name.dir/just_foo/just_foo.cpp.o.ddi: \
  /home/eugene/FILES/Projects/dev/Cpp/exemplar-project/src/just_foo/just_foo.cpp \
  /usr/include/stdc-predef.h \
- /home/eugene/FILES/Projects/dev/Cpp/exemplar-project/src/just_foo/../utils/includes.hpp \
+ /home/eugene/FILES/Projects/dev/Cpp/exemplar-project/src/just_foo/../utils/integrated_cxx_libs.hpp \
  /usr/include/c++/14.2.1/iostream \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \

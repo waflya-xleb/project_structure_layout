@@ -1,7 +1,7 @@
 #include "utils.hpp"
 
 namespace su {
-	void arg_foo( int argc, const char* argv[] ) {
+	void arg_function( int argc, const char* argv[] ) {
 		for ( int i = 0; i < argc; i++ ) {
 			if ( std::string( argv[1] ) == "--help" || std::string( argv[1] ) == "-h" ) {
 				std::cout << "-a, --arg <---- показать передаваемые аргументы\n-h, --help <---- показать список команд\n";
