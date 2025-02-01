@@ -17,7 +17,7 @@ namespace su {
 		}
 	}// arg_foo()
 
-	void custom_log_save( std::string& path, std::string& text) {
+	void custom_log_save( std::string& path, std::string& text, std::chrono::duration<float> program_time ) {
 		std::ofstream fout;
 		fout.open( path );
 
@@ -33,11 +33,13 @@ namespace su {
 			std::time_t now_time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 			
 			fout << std::ctime(&now_time);
+			//fout << program_time << "\n";
+			fout << "----------END-FILE------------\n";
 		}
 		fout.close();
 	}// custom_log_save()
 
-	void log_save( std::string& path ) {
+	void log_save( std::string& path, std::chrono::duration<float> program_time ) {
 		std::ofstream fout;
 		fout.open( path );
 
@@ -45,10 +47,32 @@ namespace su {
 			throw std::runtime_error( "failed to save log!" );
 		} else {
 			fout << "----------LOG-FILE------------\n";
-			fout << "log log log log log log log log log log log log log lo";
+			std::time_t now_time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+			
+			fout << std::ctime(&now_time);
+			//fout << program_time << "\n";
+			fout << "----------END-FILE------------\n";
 		}
 		fout.close();
 	}// log_save()
+
+	void error_log_save( std::string& path, std::string& error_text, std::chrono::duration<float> program_time ) {
+		std::ofstream fout;
+		fout.open( path );
+
+		if ( !fout.is_open() ) {
+			throw std::runtime_error( "failed to save log!" );
+		} else {
+			fout << "----------LOG-FILE------------\n";
+			std::time_t now_time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+			
+			fout << std::ctime(&now_time);
+			fout << error_text << "\n";
+			//fout << program_time << "\n";
+			fout << "----------END-FILE------------\n";
+		}
+		fout.close();
+	}// error_log_save()
 
 	std::chrono::time_point<std::chrono::high_resolution_clock> timer_start() {
 		std::chrono::time_point<std::chrono::high_resolution_clock> start = std::chrono::high_resolution_clock::now();

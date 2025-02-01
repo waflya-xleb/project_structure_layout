@@ -98978,9 +98978,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 namespace su {
  void arg_foo( int argc, const char* argv[] );
 
- void custom_log_save( std::string& path, std::string& text);
+ void custom_log_save( std::string& path, std::string& text, std::chrono::duration<float> program_time );
 
- void log_save( std::string& path );
+ void log_save( std::string& path, std::chrono::duration<float> program_time );
+
+ void error_log_save( std::string& path, std::string& error_text, std::chrono::duration<float> program_time );
 
  std::chrono::time_point<std::chrono::high_resolution_clock> timer_start();
 
@@ -99002,27 +99004,46 @@ void foo();
 void just_foo();
 # 4 "/home/eugene/FILES/Projects/dev/Cpp/exemplar-project/src/main.cpp" 2
 
+
+
 int main( int argc, const char* argv[] ) {
  if ( argc > 1 ) {
   su::arg_foo( argc, argv );
  }
 
  auto start = su::timer_start();
+
  std::cout << "The September 21st Incident of Gigi Murin. (the start message*)\n";
+
  std::string log_path = "log.txt";
- std::string custom_log_text = "none";
+ std::string custom_log_text = "the custom text.";
+ std::string error_text = "are success!";
+ std::chrono::duration<float> program_time;
 
  try {
   just_foo();
   foo();
 
-  std::cout << su::timer_end( start ) << "\n";
 
-  su::custom_log_save( log_path, custom_log_text );
+
+  program_time = su::timer_end( start );
+  su::custom_log_save( log_path, custom_log_text, program_time );
  } catch( std::exception& e ) {
+
   std::cout << "std::exception: " << e.what() << "\n";
+
+
+  program_time = su::timer_end( start );
+  error_text = "the program has stopped, std::exception: " + (std::string)e.what();
+  su::error_log_save( log_path, error_text, program_time );
  } catch( ... ) {
+
   std::cout << "unknown exception.\n";
+
+
+  program_time = su::timer_end( start );
+  error_text = "the program has stopped, unknown error.";
+  su::error_log_save( log_path, error_text, program_time );
  }
 
  return 0;

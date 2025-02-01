@@ -98978,9 +98978,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 namespace su {
  void arg_foo( int argc, const char* argv[] );
 
- void custom_log_save( std::string& path, std::string& text);
+ void custom_log_save( std::string& path, std::string& text, std::chrono::duration<float> program_time );
 
- void log_save( std::string& path );
+ void log_save( std::string& path, std::chrono::duration<float> program_time );
+
+ void error_log_save( std::string& path, std::string& error_text, std::chrono::duration<float> program_time );
 
  std::chrono::time_point<std::chrono::high_resolution_clock> timer_start();
 
@@ -99005,7 +99007,7 @@ namespace su {
   }
  }
 
- void custom_log_save( std::string& path, std::string& text) {
+ void custom_log_save( std::string& path, std::string& text, std::chrono::duration<float> program_time ) {
   std::ofstream fout;
   fout.open( path );
 
@@ -99021,11 +99023,13 @@ namespace su {
    std::time_t now_time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 
    fout << std::ctime(&now_time);
+
+   fout << "----------END-FILE------------\n";
   }
   fout.close();
  }
 
- void log_save( std::string& path ) {
+ void log_save( std::string& path, std::chrono::duration<float> program_time ) {
   std::ofstream fout;
   fout.open( path );
 
@@ -99033,7 +99037,29 @@ namespace su {
    throw std::runtime_error( "failed to save log!" );
   } else {
    fout << "----------LOG-FILE------------\n";
-   fout << "log log log log log log log log log log log log log lo";
+   std::time_t now_time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+
+   fout << std::ctime(&now_time);
+
+   fout << "----------END-FILE------------\n";
+  }
+  fout.close();
+ }
+
+ void error_log_save( std::string& path, std::string& error_text, std::chrono::duration<float> program_time ) {
+  std::ofstream fout;
+  fout.open( path );
+
+  if ( !fout.is_open() ) {
+   throw std::runtime_error( "failed to save log!" );
+  } else {
+   fout << "----------LOG-FILE------------\n";
+   std::time_t now_time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+
+   fout << std::ctime(&now_time);
+   fout << error_text << "\n";
+
+   fout << "----------END-FILE------------\n";
   }
   fout.close();
  }

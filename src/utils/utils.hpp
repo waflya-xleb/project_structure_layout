@@ -7,9 +7,11 @@
 namespace su {
 	void arg_foo( int argc, const char* argv[] );
 
-	void custom_log_save( std::string& path, std::string& text);
+	void custom_log_save( std::string& path, std::string& text, std::chrono::duration<float> program_time );
 
-	void log_save( std::string& path );
+	void log_save( std::string& path, std::chrono::duration<float> program_time );
+
+	void error_log_save( std::string& path, std::string& error_text, std::chrono::duration<float> program_time );
 
 	std::chrono::time_point<std::chrono::high_resolution_clock> timer_start();
 
