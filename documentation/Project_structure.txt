@@ -1,0 +1,40 @@
+bla-bla-bla
+
+The Structure:
+--Project-name v*.*.* \
+  |-bin\
+    |-out\
+      |-**
+  |-build\
+    |-**
+  |-cmake\
+    |-base-kit.cmake;
+    |-*.cmake
+  |-documentation\
+    |-Project_structure.txt;
+    |-rules.txt;
+    |-syntax_rules.txt;
+    |-*.txt;
+  |-include\
+    |-include_system_libs.hpp;
+    |-*.hpp;
+  |-libs\
+    |-custom_lib\
+      |-**
+    |-dll\
+      |-*.dll;
+    |-lib\
+      |-*.lib;
+    |-non_compiled_lib\
+      |-**
+  |-src\
+    |-main.cpp;
+    |-CMakeLists.txt;
+    |-include\
+      |-# includes.hpp #;
+      |-*.hpp;
+    |-utils\
+      |-utils.cpp;
+      |-utils.hpp;
+  |-CMakeLists.txt;
+
