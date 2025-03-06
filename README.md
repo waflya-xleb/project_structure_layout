@@ -1,3 +1,5 @@
+# ПРОЕКТ ЗАМОРОЖЕН
+
 ### EN:  Title
 #### Building the project
 `cmake -G "Ninja" .. && ninja` or `cmake -G "Unix Makefiles" .. && make -f makefile`
